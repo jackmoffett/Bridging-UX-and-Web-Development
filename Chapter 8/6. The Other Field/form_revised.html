@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Form Revised</title>
+        <link rel="stylesheet" href="form_revised.css" type="text/css" />
+        <script>
+            function test() {
+                if (document.getElementById('dessert').value == 'other') {
+                    document.getElementById('simpleForm').className = 'other';
+                } 
+                else {
+                    document.getElementById('simpleForm').className = '';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form id="simpleForm">
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="firstName" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td> 
+                    <td><input type="text" name="lastName" /></td>
+                </tr>
+                <tr>
+                    <td>Favorite Dessert</td>
+                    <td>
+                        <select id="dessert" name="dessert" onclick="test()">
+                            <option value="blank"></option>
+                            <option value="cake">Cake</option>
+                            <option value="iceCream">Ice Cream</option>
+                            <option value="pie">Pie</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="otherRow">
+                    <td></td>
+                    <td><input type="text" name="other" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button>Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

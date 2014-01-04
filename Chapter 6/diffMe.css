@@ -1,0 +1,57 @@
+.menuBar {
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.menuBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menuBar li {
+    float: left;
+    margin-left: 20px;
+}
+
+.menuBar .logo {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+    line-height: 30px;
+}
+
+.menuBar .menu,
+.menuBar .navItem {
+    font-size: 14px;
+    line-height: 34px;
+    padding-right: 13px;
+}
+
+.menuBar .logOff {
+    float: right;
+    margin-right: 10px;
+}
+
+.menuBar .skinSwap {
+    float: right;
+    font-size: 12px;
+    text-decoration: underline;
+    line-height: 36px;
+}
+
+.menuBar input {
+    color: #bfbfbf;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 0;
+    height: 17px;
+}
+
+.menuBar input:focus {
+    color: #000;
+}

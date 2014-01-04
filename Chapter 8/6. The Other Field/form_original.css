@@ -1,0 +1,35 @@
+html {
+    background-color: #325c6b;
+}
+
+html,
+input,
+button {
+    font: 14px Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+}
+
+select,
+input {
+    width: 200px;
+}
+
+select {
+    font-size: 16px;
+}
+
+form {
+    width: 350px;
+    margin: 50px auto auto;
+    background-color: #ffffff;
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+td {
+    padding-right: 5px;
+}

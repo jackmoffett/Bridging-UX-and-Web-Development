@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact List</title>
+        <link rel="stylesheet" href="contactList_incomplete.css" type="text/css" />
+        <script language="javascript" type="text/javascript">
+            function showLabels() {
+                document.getElementById("myID").className += " myClass";
+            }
+            
+            function hideLabels() {
+                document.getElementById("myID").className =
+                   document.getElementById("myID").className.replace
+                      ( /(?:^|\s)myClass(?!\S)/g , '' )
+            }
+            
+            function showPhotos() {
+                document.getElementById("myID").className += " myClass";
+            }
+            
+            function hidePhotos() {
+                document.getElementById("myID").className =
+                   document.getElementById("myID").className.replace
+                      ( /(?:^|\s)myClass(?!\S)/g , '' )
+            }
+            
+            function showAll() {
+                document.getElementById("myID").className += " myClass";
+            }
+            
+            function showFavorites() {
+                document.getElementById("myID").className =
+                   document.getElementById("myID").className.replace
+                      ( /(?:^|\s)myClass(?!\S)/g , '' )
+            }
+        </script>
+        
+    </head>
+    <body>
+        <div id="contactList" class="contactList">
+            <div class="listTitle">My Contacts</div>
+            
+            <div class="contact favorite">
+                <div class="photoBlock">
+                    <img src="Photos/Wedge.jpg" />
+                </div>
+                <div class="infoBlock">
+                    <div class="nameBlock">
+                        <div class="fav"></div>
+                        <span class="name">Wedge Antilles</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Home:</span>
+                        <span class="data">123-456-7890</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Mobile:</span>
+                        <span class="data">098-765-4321</span>
+                    </div>
+                    <div class="method email">
+                        <span class="label">Email:</span>
+                        <span class="data"><a href="">wantilles@rebelalliance.org</a></span>
+                    </div>
+                    <div class="method web">
+                        <span class="label">Web:</span>
+                        <span class="data"><a href="">www.rebelalliance.org</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact favorite">
+                <div class="photoBlock">
+                    <img src="Photos/Biggs.jpg" />
+                </div>
+                <div class="infoBlock">
+                    <div class="nameBlock">
+                        <div class="fav"></div>
+                        <span class="name">Biggs Darklighter</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Home:</span>
+                        <span class="data">123-456-7890</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Mobile:</span>
+                        <span class="data">098-765-4321</span>
+                    </div>
+                    <div class="method email">
+                        <span class="label">Email:</span>
+                        <span class="data"><a href="">bdarklighter@gmail.com</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact">
+                <div class="photoBlock">
+                    <img src="Photos/Wes.jpg" />
+                </div>
+                <div class="infoBlock">
+                    <div class="nameBlock">
+                        <div class="fav"></div>
+                        <span class="name">Wes Janson</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Home:</span>
+                        <span class="data">123-456-7890</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Mobile:</span>
+                        <span class="data">098-765-4321</span>
+                    </div>
+                    <div class="method twitter">
+                        <span class="label">Twitter:</span>
+                        <span class="data">@wesjanson</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact">
+                <div class="photoBlock">
+                    <img src="Photos/Porkins.jpg" />
+                </div>
+                <div class="infoBlock">
+                    <div class="nameBlock">
+                        <div class="fav"></div>
+                        <span class="name">Jek Porkins</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Home:</span>
+                        <span class="data">123-456-7890</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Mobile:</span>
+                        <span class="data">837-458-8349</span>
+                    </div>
+                    <div class="method web">
+                        <span class="label">Web:</span>
+                        <span class="data"><a href="">www.rebelalliance.org</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact favorite">
+                <div class="photoBlock">
+                    <img src="Photos/Dak.jpg" />
+                </div>
+                <div class="infoBlock">
+                    <div class="nameBlock">
+                        <div class="fav"></div>
+                        <span class="name">Dak Ralter</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Mobile:</span>
+                        <span class="data">098-765-4321</span>
+                    </div>
+                    <div class="method twitter">
+                        <span class="label">Twitter:</span>
+                        <span class="data">@dakralter</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact">
+                <div class="photoBlock">
+                    <img src="Photos/Tiree.jpg" />
+                </div>
+                <div class="infoBlock">
+                    <div class="nameBlock">
+                        <div class="fav"></div>
+                        <span class="name">Tiree</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Mobile:</span>
+                        <span class="data">098-765-4321</span>
+                    </div>
+                    <div class="method twitter">
+                        <span class="label">Twitter:</span>
+                        <span class="data">@tiree</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact">
+                <div class="photoBlock">
+                    <img src="Photos/Dutch.jpg" />
+                </div>
+                <div class="infoBlock">
+                    <div class="nameBlock">
+                        <div class="fav"></div>
+                        <span class="name">John Dutch Vander</span>
+                    </div>
+                    <div class="method phone">
+                        <span class="label">Home:</span>
+                        <span class="data">123-456-7890</span>
+                    </div>
+                    <div class="method web">
+                        <span class="label">Web:</span>
+                        <span class="data"><a href="">www.rebelalliance.org</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="buttonBlock">
+                <div id="favorites" class="button showFavorites" onclick="showFavorites()">
+                    <div class="l"></div>
+                    <div class="c">Show Favorites</div>
+                    <div class="r"></div>
+                </div>
+                <div id="all" class="button showAll" onclick="showAll()">
+                    <div class="l"></div>
+                    <div class="c">Show All</div>
+                    <div class="r"></div>
+                </div>
+                <div id="showPhotos" class="button showPhotos" onclick="showPhotos()">
+                    <div class="l"></div>
+                    <div class="c">Show Photos</div>
+                    <div class="r"></div>
+                </div>
+                <div id="hidePhotos" class="button hidePhotos" onclick="hidePhotos()">
+                    <div class="l"></div>
+                    <div class="c">Hide Photos</div>
+                    <div class="r"></div>
+                </div>
+                <div id="showLabels" class="button showLabels" onclick="showLabels()">
+                    <div class="l"></div>
+                    <div class="c">Show Labels</div>
+                    <div class="r"></div>
+                </div>
+                <div id="hideLabels" class="button hideLabels" onclick="hideLabels()">
+                    <div class="l"></div>
+                    <div class="c">Hide Labels</div>
+                    <div class="r"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,216 @@
+html, body {
+    font: 14px Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a:link,
+a:visited {
+    color: #4289cc;
+}
+
+a:hover {
+    color: #e48e04;
+}
+
+
+/* @group Contact List  */
+
+.contactList {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+.listTitle {
+    font-weight: bold;
+    font-size: 2em;
+    border-bottom: 3px solid #dfdfdc;
+    margin-bottom: 20px;
+    padding-bottom: 3px;
+}
+
+
+/* @group Contact */
+
+.contact {
+    position: relative;
+    float: left;
+    margin-bottom: 40px;
+    min-width: 250px; /* Reduced to width without photo. */
+    display: none; /* When not in the "all" state, hide contacts. */
+}
+
+.photosOn .contact {
+    /* Increases the min-width when the photos are displayed. */
+    min-width: 400px;
+}
+
+.favorite {
+    /* Overwrites the display set on the contacts so the favorites
+       are always displayed. */
+    display: inherit;
+}
+
+.all .contact {
+    /* When in the "all" state, display all contacts. */
+    display: inherit;
+}
+
+
+/* @group Photo */
+
+.photoBlock {
+    width: 125px;
+    height: 125px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: none; /* When not in photosOn state, hide photos. */
+}
+
+.photosOn .photoBlock {
+    /* When in photosOn state, show photos. */
+    display: inherit;
+}
+
+.photoBlock img {
+    max-width: 125px;
+}
+
+/* @end */
+
+
+/* @group Info */
+
+.infoBlock {
+    height: 125px;
+}
+
+.photosOn .infoBlock {
+    /* This ruleset is only desirable when in the 
+       photosOn state. */
+    position: absolute;
+    top: 0;
+    left: 135px;
+}
+
+.fav {
+    width: 25px;
+    height: 25px;
+    background-image: url(Graphics/fav.png);
+    float: left;
+    margin-right: 3px;
+    display: none;
+}
+
+.favorite .fav {
+    display: inherit;
+}
+
+.infoBlock .name {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.infoBlock .method {
+    line-height: 1.3em;
+}
+
+.infoBlock .label {
+    color: #838383;
+    display: none; /* Hide when not in "labelsOn" state. */
+}
+
+.labelsOn .infoBlock .label {
+    /* Show labels when in "labelsOn" state. */
+    display: inline;
+}
+
+/* @end */
+
+/* @end */
+
+/* @end */
+
+
+/* @group Buttons */
+
+.buttonBlock {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.button {
+    float: left;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+.button div {
+	float: left;
+	height: 28px;
+	cursor: pointer;
+}
+
+.button .l,
+.button .r {
+	width: 9px;
+}
+
+.button .c {
+	line-height: 28px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.button .l,
+.button .r {
+	background-image: url(Graphics/sprite_buttonCaps.png);
+}
+
+.button .r {
+    background-position: -9px 0;
+}
+
+.button .c {
+	background-image: url(Graphics/sprite_button.png);
+	font-weight: bold;
+}
+
+.button:hover div {
+	background-position: 0 -28px;
+}
+
+.button:hover .r {
+	background-position: -9px -28px;
+}
+
+.button:active div {
+	background-position: 0 -56px;
+}
+
+.button:active .r {
+	background-position: -9px -56px;
+}
+
+.hidePhotos,
+.hideLabels,
+.showFavorites,
+.photosOn .showPhotos,
+.labelsOn .showLabels,
+.all .showAll {
+    /* Hides the buttons in the states they should be hidden. */
+    display: none;
+}
+
+.photosOn .hidePhotos,
+.labelsOn .hideLabels,
+.all .showFavorites {
+    /* Shows buttons in the states they should be shown. */
+    display: inherit;
+}
+
+/* @end */

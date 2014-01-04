@@ -1,0 +1,31 @@
+/* @group GroupName1 */
+
+.aStyle {
+    padding: 5px;
+}
+
+.anotherStyle {
+    margin: 10px;
+}
+
+/* @end */
+
+
+/* @group GroupName2 */
+/* This comment will appear in the Navigator */
+
+.oneMoreStyle {
+    /* Comment about a style. */
+    margin: 5px;
+}
+
+
+/* @group Subgroup */
+
+.lastStyle {
+    font-size: 14pt; /* Comment about an attribute. */
+}
+
+/* @end */
+
+/* @end */

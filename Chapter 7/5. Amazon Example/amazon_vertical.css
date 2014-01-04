@@ -1,0 +1,131 @@
+/* @group Vertical List */
+
+/* The styles in this group all begin with
+   the verticalList selector because I only
+   want them to take over when the
+   productBlock component is used in a 
+   vertical list. */
+
+.verticalList {
+    /* Reconfigures the entire widget to be
+       a column on the right edge of the page. */
+    float: right;
+    width: 300px;
+}
+
+.verticalList .productBlock {
+    /* Most of the work is done right here. The
+       width of the block has to be reset from
+       the % width used horizontally. The float
+       is cancelled. Margins have to be set top
+       and bottom for vertical spacing. */
+    float: none;
+    clear: both;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.verticalList .imgBlock,
+.verticalList .detailBlock {
+    /* This causes the details to sit beside the
+       image, rather than wrapping below them. */
+    float: left;
+}
+
+.verticalList .imgBlock {
+    /* Height is no longer the controlling factor
+       for the imgBlock element. Height is canceled
+       and width is specified instead. Right margin
+       spaces off the details. */
+    height: inherit;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.verticalList .imgBlock img {
+    /* Here's the ugly bit. The margin-top used for
+       vertically centering the graphic is no longer
+       desired. The only way to cancel it in the
+       stylesheet is to use the 'important'
+       designation. The max height and width shrink
+       the image to a size more suitable for the
+       vertical layout. */
+    max-height: 100px;
+    max-width: 100px;
+    margin-top: 0 !important;
+}
+
+.verticalList .detailBlock {
+    /* This causes the longer titles to wrap
+       without causing the detailBlock to move
+       below the imgBlock. */
+    max-width: 175px;
+}
+
+/* @end */
+
+
+/* @group Horizontal List */
+
+.productBlock {
+    width: 14.285714285714286%;
+    float: left;
+    font-size: .916em;
+    line-height: 14px;
+}
+
+.productBlock .inner {
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+.imgBlock {
+    height: 135px;
+    margin-bottom: 4px;
+}
+
+.productBlock .title {
+    color: #004B91;
+    font-size: 12px;
+}
+
+.descriptor {
+    color: #666;
+}
+
+.price {
+    color: rgb(153, 0, 0);
+    font-size: 14px;
+    line-height: 1.286em;
+    letter-spacing: .025em;
+}
+
+.listPrice {
+    color: rgb(102, 102, 102);
+    text-decoration: line-through;
+}
+
+.ratingBlock {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.reviews {
+    margin-left: 6px;
+}
+
+.productBlock div a:link {
+    text-decoration: none;
+}
+
+.productBlock div a:hover {
+    text-decoration: underline;
+}
+
+.s9OtherItems .optLabel {
+    display: none;
+}
+
+/* @end */

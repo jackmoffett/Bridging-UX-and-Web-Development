@@ -1,0 +1,35 @@
+html {
+    background: gray;
+}
+
+.buttonContainer {
+    margin: 50px;
+    overflow: hidden;
+}
+
+.buttonContainer .button {
+    float: left;
+    margin-right: 50px;
+}
+
+.button {
+    height: 50px;
+    width: 50px;
+    background: url(sprite_button.png) no-repeat;
+}
+
+.button.red {
+    background-position-x: -50px;
+}
+
+.button:hover {
+    background-position-y: -50px;
+}
+
+.button:active {
+    background-position-y: -100px;
+}
+
+.button.disabled {
+    background-position-y: -150px;
+}

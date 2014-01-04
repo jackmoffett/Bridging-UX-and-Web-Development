@@ -1,0 +1,137 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    background: #5c90aa;
+    background: -moz-linear-gradient(top,  #5c90aa 0%, #15576b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5c90aa), color-stop(100%,#15576b));
+    background: -webkit-linear-gradient(top,  #5c90aa 0%,#15576b 100%);
+    background: -o-linear-gradient(top,  #5c90aa 0%,#15576b 100%);
+    background: -ms-linear-gradient(top,  #5c90aa 0%,#15576b 100%);
+    background: linear-gradient(to bottom,  #5c90aa 0%,#15576b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c90aa', endColorstr='#15576b',GradientType=0 );
+    /* Declare the default font styles here, rather than on every element that contains text. */
+    font-family: Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+}
+
+.contentBox {
+    /* These are structural styles that were shared between the containers on the page.
+       Now they are in a utility class that can be put on any element that we want to 
+       format in this way. */
+    max-width: 90%;
+    min-width: 430px;
+    margin: 50px auto;
+}
+
+.shadow {
+    /* The shadow styles were also shared between the containers, but they are "skin",
+       rather than structure and may not always be used with the styles that were
+       placed in .contentBox. */
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+}
+
+.corners {
+    /* The corner styles were in the same boat, but they should be kept separate
+       from the shadow styles. You may not want everything with shadows to have
+       rounded corners and vice versa. */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.boxGradient {
+    /* Both the toolbar and the note shared the gradient. This makes for another
+       good utility class. */
+    background: #e1ffff;
+    background: -moz-linear-gradient(top,  #e1ffff 0%, #e1ffff 7%, #e1ffff 12%, #fdffff 12%, #e6f8fd 30%, #c8eefb 54%, #bee4f8 75%, #b1d8f5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e1ffff), color-stop(7%,#e1ffff), color-stop(12%,#e1ffff), color-stop(12%,#fdffff), color-stop(30%,#e6f8fd), color-stop(54%,#c8eefb), color-stop(75%,#bee4f8), color-stop(100%,#b1d8f5));
+    background: -webkit-linear-gradient(top,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+    background: -o-linear-gradient(top,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+    background: -ms-linear-gradient(top,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+    background: linear-gradient(to bottom,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', endColorstr='#b1d8f5',GradientType=0 );
+}
+
+h1,
+.tool {
+    /* Right now, the toolbar shares the same text styling as the content box,
+       so they can be defined together. They can easily be separated in the
+       future if need be. */
+    color: #616161;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.toolbar {
+    height: 50px;
+}
+
+.tool {
+    float: left;
+    cursor: pointer;
+    width: 25%;
+    text-align: center;
+    /* line-height was broken out from the rest of the font styles that were
+       moved into the html style. */
+    line-height: 50px;
+}
+
+.tool:hover {
+    background: #d7af2d;
+}
+
+.tool:active {
+    background-color: #a07122;
+}
+
+.tool:first-child {
+    /* In the original file, the corner radius was set only on the first
+       and last items. I decided it would be better to use the utility
+       class to assign the corner radius and then use these styles to set
+       the corners that shouldn't be rounded. */
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.tool:last-child {
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.post {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.content {
+    /* Replace the descendant selectors with a single class. */
+    margin: 20px;
+}
+
+.note {
+    line-height: 30px;
+}
+
+.userName {
+    /* It's better to create a style that isn't confined by its parent
+       unless absolutely necessary. Design for reuse. */
+    font-weight: bold;
+}
+
+.title {
+    font-style: italic;
+}
