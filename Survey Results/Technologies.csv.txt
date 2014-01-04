@@ -1,0 +1,28 @@
+Technologies,Proficient,Category
+HTML,59,Client Side
+CSS,53,Client Side
+ActionScript,9,Client Side
+Spry,2,Client Side
+JavaScript,25,Client Side
+jQuery,20,JS Library
+Moo Tools,2,JS Library
+YUI,6,JS Library
+DOJO,2,JS Library
+Prototype,10,JS Library
+Ext JS,1,JS Library
+X Library,1,JS Library
+Java,9,Client Side
+Ruby,5,Server Side
+Python,4,Server Side
+Perl,5,Server Side
+PHP,17,Server Side
+C++,4,Compiled
+C#,4,Compiled
+Objective-C,3,Compiled
+Visual Basic,4,Compiled
+Visual C++,1,Compiled
+Processing,4,Client Side
+.NET,5,Server Side
+XML,13,XML
+XSLT,7,XML
+WPF/XAML,2,XML
