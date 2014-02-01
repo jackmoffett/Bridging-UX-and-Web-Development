@@ -7,29 +7,42 @@ html {
     overflow: hidden;
 }
 
-.buttonContainer .button {
+.buttonContainer button {
     float: left;
     margin-right: 50px;
 }
 
-.button {
+button {
     height: 50px;
     width: 50px;
+    border: none;
     background: url(sprite_button.png) no-repeat;
 }
 
-.button.red {
-    background-position-x: -50px;
+.stop {
+    background-position: -50px 0;
 }
 
-.button:hover {
-    background-position-y: -50px;
+button:hover {
+    background-position: 0 -50px;
 }
 
-.button:active {
-    background-position-y: -100px;
+.stop:hover {
+    background-position: -50px -50px;
 }
 
-.button.disabled {
-    background-position-y: -150px;
+button:active {
+    background-position: 0 -100px;
+}
+
+.stop:active {
+    background-position: -50px -100px;
+}
+
+button[disabled] {
+    background-position: 0 -150px;
+}
+
+.stop[disabled] {
+    background-position: -50px -150px;
 }
