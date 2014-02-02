@@ -6,17 +6,18 @@
         <link rel="stylesheet" href="form_revised.css" type="text/css" />
         <script>
             function test() {
-                if (document.getElementById('dessert').value == 'other') {
-                    document.getElementById('simpleForm').className = 'other';
+                var simpleForm=document.querySelector('[name="simpleForm"]');
+                if (document.querySelector('[name="dessert"]').value == 'other') {
+                    simpleForm.classList.add('other');
                 } 
                 else {
-                    document.getElementById('simpleForm').className = '';
+                    simpleForm.classList.remove('other');
                 }
             }
         </script>
     </head>
     <body>
-        <form id="simpleForm">
+        <form name="simpleForm">
             <table>
                 <tr>
                     <td>First Name</td>
@@ -29,7 +30,7 @@
                 <tr>
                     <td>Favorite Dessert</td>
                     <td>
-                        <select id="dessert" name="dessert" onclick="test()">
+                        <select name="dessert" onclick="test()">
                             <option value="blank"></option>
                             <option value="cake">Cake</option>
                             <option value="iceCream">Ice Cream</option>

@@ -6,51 +6,38 @@
         <link rel="stylesheet" href="contactList_complete.css" type="text/css" />
         
         <!-- We want all states defined at the top level of the contact list. So,
-             every function is going to target "contactList", the ID of the top div.
+             every function is going to target "contactList", the identity class 
+             of the top div.
              
-             Each "show" function is going to add the class that is found on the
-             element it is supposed to show.
-             
-             Each "hide" function is going to replace the class on the element it
-             is supposed to hide with nothing, essentially removing the class. -->
+             Each function is going to toggle the class that is found on the
+             element it is supposed to show or hide. If the class already exists,
+             it will remove it. If it is missing, it will add it. -->
              
         <script language="javascript" type="text/javascript">
-            function showLabels() {
-                document.getElementById("contactList").className += " labelsOn";
+            var contactList;
+            
+            function init() {
+                contactList = document.querySelector('.contactList');
             }
             
-            function hideLabels() {
-                document.getElementById("contactList").className =
-                   document.getElementById("contactList").className.replace
-                      ( /(?:^|\s)labelsOn(?!\S)/g , '' )
+            function toggleLabels() {
+                contactList.classList.toggle('labelsOn');
             }
             
-            function showPhotos() {
-                document.getElementById("contactList").className += " photosOn";
+            function togglePhotos() {
+                contactList.classList.toggle('photosOn');
             }
-            
-            function hidePhotos() {
-                document.getElementById("contactList").className =
-                   document.getElementById("contactList").className.replace
-                      ( /(?:^|\s)photosOn(?!\S)/g , '' )
-            }
-            
-            function showAll() {
-                document.getElementById("contactList").className += " all";
-            }
-            
-            function showFavorites() {
-                document.getElementById("contactList").className =
-                   document.getElementById("contactList").className.replace
-                      ( /(?:^|\s)all(?!\S)/g , '' )
+                        
+            function toggleFavorites() {
+                contactList.classList.toggle('all');
             }
         </script>
         
     </head>
-    <body>
+    <body onload="init();">
         <!-- The  classes photosOn labelsOn and all are added here to specify the 
              default state. -->
-        <div id="contactList" class="contactList photosOn labelsOn all">
+        <div class="contactList photosOn labelsOn all">
             <div class="listTitle">My Contacts</div>
             
             <div class="contact favorite">
@@ -100,7 +87,7 @@
                     </div>
                     <div class="method email">
                         <span class="label">Email:</span>
-                        <span class="data"><a href="">jchristensen@someCompany.com</a></span>
+                        <span class="data"><a href="">jchristensen@aCompany.com</a></span>
                     </div>
                 </div>
             </div>
@@ -200,7 +187,7 @@
                 <div class="infoBlock">
                     <div class="nameBlock">
                         <div class="fav"></div>
-                        <span class="name">Stephen Schwab</span>
+                        <span class="name">Steven Schwab</span>
                     </div>
                     <div class="method phone">
                         <span class="label">Home:</span>
@@ -238,34 +225,24 @@
             </div>
             
             <div class="buttonBlock">
-                <div id="favorites" class="button showFavorites" onclick="showFavorites()">
+                <!-- Each button has two labels. One will be hidden depending
+                     on the current state. -->
+                <div class="button toggleFavorites" onclick="toggleFavorites()">
                     <div class="l"></div>
-                    <div class="c">Show Favorites</div>
+                    <div class="c hide">Show Favorites</div>
+                    <div class="c show">Show All</div>
                     <div class="r"></div>
                 </div>
-                <div id="all" class="button showAll" onclick="showAll()">
+                <div class="button togglePhotos" onclick="togglePhotos()">
                     <div class="l"></div>
-                    <div class="c">Show All</div>
+                    <div class="c show">Show Photos</div>
+                    <div class="c hide">Hide Photos</div>
                     <div class="r"></div>
                 </div>
-                <div id="showPhotos" class="button showPhotos" onclick="showPhotos()">
+                <div class="button toggleLabels" onclick="toggleLabels()">
                     <div class="l"></div>
-                    <div class="c">Show Photos</div>
-                    <div class="r"></div>
-                </div>
-                <div id="hidePhotos" class="button hidePhotos" onclick="hidePhotos()">
-                    <div class="l"></div>
-                    <div class="c">Hide Photos</div>
-                    <div class="r"></div>
-                </div>
-                <div id="showLabels" class="button showLabels" onclick="showLabels()">
-                    <div class="l"></div>
-                    <div class="c">Show Labels</div>
-                    <div class="r"></div>
-                </div>
-                <div id="hideLabels" class="button hideLabels" onclick="hideLabels()">
-                    <div class="l"></div>
-                    <div class="c">Hide Labels</div>
+                    <div class="c show">Show Labels</div>
+                    <div class="c hide">Hide Labels</div>
                     <div class="r"></div>
                 </div>
             </div>

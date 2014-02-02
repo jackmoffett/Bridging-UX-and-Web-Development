@@ -127,26 +127,19 @@ a:hover {
 .button .l,
 .button .r {
 	width: 9px;
+	background-image: url(Graphics/sprite_buttonCaps.png);
 }
 
 .button .c {
 	line-height: 28px;
 	padding-left: 5px;
 	padding-right: 5px;
-}
-
-.button .l,
-.button .r {
-	background-image: url(Graphics/sprite_buttonCaps.png);
+	font-weight: bold;
+	background-image: url(Graphics/sprite_button.png);
 }
 
 .button .r {
     background-position: -9px 0;
-}
-
-.button .c {
-	background-image: url(Graphics/sprite_button.png);
-	font-weight: bold;
 }
 
 .button:hover div {

@@ -5,40 +5,28 @@
         <title>Contact List</title>
         <link rel="stylesheet" href="contactList_incomplete.css" type="text/css" />
         <script language="javascript" type="text/javascript">
-            function showLabels() {
-                document.getElementById("myID").className += " myClass";
+            var contactList;
+            
+            function init() {
+                contactList = document.querySelector('.myClass');
             }
             
-            function hideLabels() {
-                document.getElementById("myID").className =
-                   document.getElementById("myID").className.replace
-                      ( /(?:^|\s)myClass(?!\S)/g , '' )
+            function toggleLabels() {
+                contactList.classList.toggle('myClass');
             }
             
-            function showPhotos() {
-                document.getElementById("myID").className += " myClass";
+            function togglePhotos() {
+                contactList.classList.toggle('myClass');
             }
-            
-            function hidePhotos() {
-                document.getElementById("myID").className =
-                   document.getElementById("myID").className.replace
-                      ( /(?:^|\s)myClass(?!\S)/g , '' )
-            }
-            
-            function showAll() {
-                document.getElementById("myID").className += " myClass";
-            }
-            
-            function showFavorites() {
-                document.getElementById("myID").className =
-                   document.getElementById("myID").className.replace
-                      ( /(?:^|\s)myClass(?!\S)/g , '' )
+                        
+            function toggleFavorites() {
+                contactList.classList.toggle('myClass');
             }
         </script>
         
     </head>
-    <body>
-        <div id="contactList" class="contactList">
+    <body onload="init();">
+        <div class="contactList">
             <div class="listTitle">My Contacts</div>
             
             <div class="contact favorite">
@@ -88,7 +76,7 @@
                     </div>
                     <div class="method email">
                         <span class="label">Email:</span>
-                        <span class="data"><a href="">jchristensen@someCompany.com</a></span>
+                        <span class="data"><a href="">jchristensen@aCompany.com</a></span>
                     </div>
                 </div>
             </div>
@@ -188,7 +176,7 @@
                 <div class="infoBlock">
                     <div class="nameBlock">
                         <div class="fav"></div>
-                        <span class="name">Stephen Schwab</span>
+                        <span class="name">Steven Schwab</span>
                     </div>
                     <div class="method phone">
                         <span class="label">Home:</span>
@@ -226,33 +214,23 @@
             </div>
             
             <div class="buttonBlock">
-                <div id="favorites" class="button showFavorites" onclick="showFavorites()">
+                <!-- Each button has two labels. One will be hidden depending
+                     on the current state. -->
+                <div class="button toggleFavorites" onclick="toggleFavorites()">
                     <div class="l"></div>
                     <div class="c">Show Favorites</div>
-                    <div class="r"></div>
-                </div>
-                <div id="all" class="button showAll" onclick="showAll()">
-                    <div class="l"></div>
                     <div class="c">Show All</div>
                     <div class="r"></div>
                 </div>
-                <div id="showPhotos" class="button showPhotos" onclick="showPhotos()">
+                <div class="button togglePhotos" onclick="togglePhotos()">
                     <div class="l"></div>
                     <div class="c">Show Photos</div>
-                    <div class="r"></div>
-                </div>
-                <div id="hidePhotos" class="button hidePhotos" onclick="hidePhotos()">
-                    <div class="l"></div>
                     <div class="c">Hide Photos</div>
                     <div class="r"></div>
                 </div>
-                <div id="showLabels" class="button showLabels" onclick="showLabels()">
+                <div class="button toggleLabels" onclick="toggleLabels()">
                     <div class="l"></div>
                     <div class="c">Show Labels</div>
-                    <div class="r"></div>
-                </div>
-                <div id="hideLabels" class="button hideLabels" onclick="hideLabels()">
-                    <div class="l"></div>
                     <div class="c">Hide Labels</div>
                     <div class="r"></div>
                 </div>
