@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Status Pane</title>
+        <link rel="stylesheet" href="statusPane.css" type="text/css" />
+        <!--[if gte IE 9]>
+          <style type="text/css">
+            .gradient {
+               filter: none;
+            }
+          </style>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="statusPane online">
+            <table>
+                <tr>
+                    <td>
+                        <div class="connection"></div>
+                    </td>
+                    <td class="connectionMessage">
+                        <span class="online">Your client is communicating with the server.</span>
+                        <span class="offline">The server is available, but your client is offline.</span>
+                        <span class="disconnected">Your client is disconnected from the server.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Capacity</td>
+            		<td>
+            		    <div class="barBack">
+            		        <div class="bar gradient"></div>
+            		        <div class="value">50%</div>
+            		    </div>
+            		</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

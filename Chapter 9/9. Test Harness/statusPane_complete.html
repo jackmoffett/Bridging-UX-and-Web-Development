@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Status Pane</title>
+        <link rel="stylesheet" href="statusPane.css" type="text/css" />
+        <!--[if gte IE 9]>
+          <style type="text/css">
+            .gradient {
+               filter: none;
+            }
+          </style>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="statusPane online">
+            <table>
+                <tr>
+                    <td>
+                        <div class="connection"></div>
+                    </td>
+                    <td class="connectionMessage">
+                        <span class="online">Your client is communicating with the server.</span>
+                        <span class="offline">The server is available, but your client is offline.</span>
+                        <span class="disconnected">Your client is disconnected from the server.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Capacity</td>
+            		<td>
+            		    <div class="barBack">
+            		        <div class="bar gradient"></div>
+            		        <div class="value">50%</div>
+            		    </div>
+            		</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- This is a test harness. Remove all code from here to "End of test harness". -->
+        <link rel="stylesheet" href="harness.css" type="text/css" />
+        <script src="jquery-2.1.0.min.js"></script>
+        
+        <div class="harnessUI">
+            <div class="widgetSet">
+                <label for="connectionMenu">Client is </label>
+                <select class="connectionMenu">
+                    <option value="online">online</option>
+                    <option value="offline">offline</option>
+                    <option value="disconnected">disconnected</option>
+                </select>
+            </div>
+            <div class="widgetSet">
+                <label for="capacityField">Capacity </label>
+                <input type="text" class="capacityField" value="50" /> %
+            </div>
+        </div>
+        
+        <script>
+            var connectionStatus;
+            var capacity;
+            
+            // When the menu changes, set the value of connectionStatus to the
+            // selected option. Then clear whatever state class is currently on
+            // statusPane and add the state class from the connectionStatus variable.
+             
+            $('.connectionMenu').change(function(){
+                connectionStatus = $(this).val();
+                $('.statusPane').removeClass('online offline disconnected').addClass(connectionStatus);
+            });
+            
+            // When the value in the field changes, set the value of capacity to
+            // the value in the field. Then set the width of the bar from the
+            // variable and write it into the value div.
+            
+            $('.capacityField').change(function() {
+                capacity = $(this).val();
+                $('.bar').width(capacity + '%');
+                $('.value').html(capacity + '%');
+            });
+        </script>
+        <!-- End of test harness. -->
+        
+    </body>
+</html>

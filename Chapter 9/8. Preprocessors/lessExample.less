@@ -1,0 +1,13 @@
+@baseColor: #b04d46;
+@saturation: 15%;
+@lightness: 10%;    
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: @baseColor;
+}
+
+div:hover {
+    background-color: lighten(saturate(@baseColor, @saturation), @lightness);
+}

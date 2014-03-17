@@ -1,0 +1,67 @@
+$errorRed: #b11e13;
+$font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.errorText {
+    margin: 5px;
+	color: $errorRed;
+	font-family: $font;
+	font-style: italic;
+}
+
+.errorBar {
+	line-height: 25px;
+	padding: 5px;
+	color: #fff;
+	background-color: $errorRed;
+	font-family: $font;
+	font-weight: bold;
+}
+
+@mixin shadow($h, $v, $blur, $color) {
+    -moz-box-shadow: $h $v $blur $color;
+    -webkit-box-shadow: $h $v $blur $color;
+    box-shadow: $h $v $blur $color;
+}
+
+.contentBox {
+	height: 100px;
+	width: 300px;
+	margin: 30px auto;
+	background-color: #5c90aa;
+	@include shadow(5px, 5px, 10px, rgba(0, 0, 0, 0.75));
+}
+
+.message {
+    margin: 10px;
+    padding: 5px;
+    font-family: $font;
+    border: 1px solid #333;
+    background-color: #cecece;
+}
+
+.caution {
+    @extend .message;
+    background-color: #eeee74;
+}
+
+.warning {
+    @extend .message;
+    background-color: #ea6a6a;
+    font-weight: bold;
+}
+
+ul {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: gray;
+    li {
+        font-size: 12px;
+        font-weight: normal;
+        color: black;
+    }
+    li.title {
+        margin-left: -20px;
+        list-style: none;
+        font-size: 14px;
+        font-weight: bold;
+    }
+}

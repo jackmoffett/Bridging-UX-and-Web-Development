@@ -1,0 +1,75 @@
+html {
+    background-color: #325c6b;
+}
+
+html {
+    font: 14px Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+}
+
+.statusPane {
+    width: 350px;
+    margin: 50px auto auto;
+    background-color: #ffffff;
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+td {
+    padding: 10px;
+}
+
+.connection {
+    height: 43px;
+    width: 43px;
+    margin: auto;
+    background-image: url(connectionStatus.png);
+}
+
+.offline .connection {
+    background-position: 0 -43px;
+}
+
+.disconnected .connection {
+    background-position: 0 -86px;
+}
+
+.online .offline,
+.online .disconnected,
+.offline .online,
+.offline .disconnected,
+.disconnected .online,
+.disconnected .offline {
+    display: none;
+}
+
+.barBack {
+    position: relative;
+    height: 20px;
+    width: 200px;
+    background-color: #dfe9f8;
+    border: 1px solid #9cadc6;
+}
+
+.bar {
+    height: 20px;
+    width: 50%;
+    background: #c6cede;
+    background: -moz-linear-gradient(top,  #c6cede 0%, #9eaec7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c6cede), color-stop(100%,#9eaec7));
+    background: -webkit-linear-gradient(top,  #c6cede 0%,#9eaec7 100%);
+    background: -o-linear-gradient(top,  #c6cede 0%,#9eaec7 100%);
+    background: -ms-linear-gradient(top,  #c6cede 0%,#9eaec7 100%);
+    background: linear-gradient(to bottom,  #c6cede 0%,#9eaec7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6cede', endColorstr='#9eaec7',GradientType=0 );
+}
+
+.value {
+    position: absolute;
+    top: 2px;
+    right: -40px;
+}

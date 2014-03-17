@@ -1,0 +1,58 @@
+.errorText {
+  margin: 5px;
+  color: #b11e13;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+
+.errorBar {
+  line-height: 25px;
+  padding: 5px;
+  color: #fff;
+  background-color: #b11e13;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.contentBox {
+  height: 100px;
+  width: 300px;
+  margin: 30px auto;
+  background-color: #5c90aa;
+  -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+}
+
+.message, .caution, .warning {
+  margin: 10px;
+  padding: 5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 1px solid #333;
+  background-color: #cecece;
+}
+
+.caution {
+  background-color: #eeee74;
+}
+
+.warning {
+  background-color: #ea6a6a;
+  font-weight: bold;
+}
+
+ul {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: gray;
+}
+ul li {
+  font-size: 12px;
+  font-weight: normal;
+  color: black;
+}
+ul li.title {
+  margin-left: -20px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+}
