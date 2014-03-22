@@ -51,8 +51,7 @@
                 </select>
             </div>
             <div class="widgetSet">
-                <label for="capacityField">Capacity </label>
-                <input type="text" class="capacityField" value="50" /> %
+                <label for="capacityField">Capacity <input type="text" class="capacityField" value="50" /> %</label>
             </div>
         </div>
         
@@ -65,7 +64,7 @@
             // statusPane and add the state class from the connectionStatus variable.
              
             $('.connectionMenu').change(function(){
-                connectionStatus = $(this).val();
+                connectionStatus = this.value;
                 $('.statusPane').removeClass('online offline disconnected').addClass(connectionStatus);
             });
             
@@ -74,7 +73,7 @@
             // variable and write it into the value div.
             
             $('.capacityField').change(function() {
-                capacity = $(this).val();
+                capacity = this.value;
                 $('.bar').width(capacity + '%');
                 $('.value').html(capacity + '%');
             });
