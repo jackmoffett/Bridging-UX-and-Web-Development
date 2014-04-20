@@ -59,13 +59,13 @@ td {
     height: 20px;
     width: 50%;
     background: #c6cede;
-    background: -moz-linear-gradient(top,  #c6cede 0%, #9eaec7 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c6cede), color-stop(100%,#9eaec7));
-    background: -webkit-linear-gradient(top,  #c6cede 0%,#9eaec7 100%);
-    background: -o-linear-gradient(top,  #c6cede 0%,#9eaec7 100%);
-    background: -ms-linear-gradient(top,  #c6cede 0%,#9eaec7 100%);
-    background: linear-gradient(to bottom,  #c6cede 0%,#9eaec7 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6cede', endColorstr='#9eaec7',GradientType=0 );
+    background: -moz-linear-gradient(top, #c6cede 0%, #9eaec7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c6cede), color-stop(100%, #9eaec7));
+    background: -webkit-linear-gradient(top, #c6cede 0%, #9eaec7 100%);
+    background: -o-linear-gradient(top, #c6cede 0%, #9eaec7 100%);
+    background: -ms-linear-gradient(top, #c6cede 0%, #9eaec7 100%);
+    background: linear-gradient(to bottom, #c6cede 0%, #9eaec7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c6cede', endColorstr='#9eaec7', GradientType=0);
 }
 
 .value {
